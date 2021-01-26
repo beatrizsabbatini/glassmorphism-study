@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  background-color: #EFE1FF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1{
+  font-family: Lato, sans-serif;
+  color:#FFFFFF;
+  font-size: 3rem;
+}
+
+p{
+  color: #FFFFFF;
+  font-family: Open Sans, sans-serif;
+  font-size: 1rem;
+  max-width: 60%;
+  margin: 0;
+}
+
+
+.main-container{
+  height: 80%;
+  width: 73%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 45px;
+  background-image: url('./images/background.png'), linear-gradient(to right, #55439E, #952FFF);
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: 0px 8px 100px -20px #000000; 
+  box-shadow: 0px 8px 100px -20px #000000;
+  position: relative;
+}
+
+.decoration{
+  position: absolute;
+  object-fit: contain;
+}
+
+#top-decoration {
+  top: -12%;
+  left: 0;
+  height: 30%;
+}
+
+#right-decoration {
+  top: 10%;
+  right: 0;
+  width: 30%;
+}
+
+#bottom-decoration {
+  bottom: 5%;
+  left: 3%;
+  height: 30%;
+}
+
+@media only screen and (max-width: 600px) {
+
+  h1{
+    font-size: 2rem;
+  }
+
+  p{
+    font-size: 1rem;
+  }
+
+  #bottom-decoration {
+    height: 15%;
+  }
+
+  #top-decoration {
+    height: 20%;
+    top: -8%;
+  }
+
+}
+
+#subtitle{
+  line-height: 2rem;
+  margin-bottom: 30px;
+  font-weight: 100;
+}
+
+
+button{
+  background-color: #4F3AA7;
+  border-radius: 6px;
+  width: 100px;
+  color: #FFFFFF;
+  border: none;
+  height: 80%;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-45%);
+  text-transform: uppercase;
+}
+
+input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+}
+
+input::placeholder{
+  color: rgba(255, 255, 255, 0.774);
+  font-family: Lato, sans-serif;
+  font-weight: 300;
+  padding: 16px;
+}
+
+#emailInput{
+  height: 4rem;
+  position: relative;
+  width: 90%;
+}
+
+#content{
+  display: flex;
+  max-width: 80%;
+  flex: 2;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#card{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 380px;
+  height: 200px;
+  outline: none;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 45px;
+}
+
+@media only screen and (max-width: 1500px) {
+  #content{
+    flex-wrap: wrap;
+  }
+
+  #card{
+    width: 300px;
+    height: 180px;
+  }
+}
+
+#texts-and-input{
+  max-width: 40%;
+}
+
+
+
+#chip{
+  width: 50px;
+  object-fit: contain;
+  padding: 30px 0 30px 0;
+}
+
+#name-and-date{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
