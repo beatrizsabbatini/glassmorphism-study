@@ -1,12 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
 body {
-  padding: 0;
+  padding: 6vh 0 6vh 0;
   margin: 0;
-  height: 100vh;
+  height: fit-content;
   background-color: #EFE1FF;
   display: flex;
+  flex: 1;
   justify-content: center;
   align-items: center;
 }
@@ -15,6 +16,7 @@ h1{
   font-family: Lato, sans-serif;
   color:#FFFFFF;
   font-size: 3rem;
+  font-weight: 700;
 }
 
 p{
@@ -25,10 +27,42 @@ p{
   margin: 0;
 }
 
+button{
+  background-color: #4F3AA7;
+  border-radius: 6px;
+  width: 100px;
+  color: #FFFFFF;
+  border: none;
+  height: 80%;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-45%);
+  text-transform: uppercase;
+}
+
+input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+}
+
+input::placeholder{
+  color: rgba(255, 255, 255, 0.774);
+  font-family: Lato, sans-serif;
+  font-weight: 300;
+  padding: 16px;
+}
+
 
 .main-container{
-  height: 80%;
+  min-height: 80vh;
   width: 73%;
+  padding: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -64,69 +98,10 @@ p{
   height: 30%;
 }
 
-@media only screen and (max-width: 600px) {
-
-  h1{
-    font-size: 2rem;
-  }
-
-  p{
-    font-size: 1rem;
-  }
-
-  #bottom-decoration {
-    height: 15%;
-  }
-
-  #top-decoration {
-    height: 20%;
-    top: -8%;
-  }
-
-}
-
 #subtitle{
   line-height: 2rem;
   margin-bottom: 30px;
   font-weight: 100;
-}
-
-
-button{
-  background-color: #4F3AA7;
-  border-radius: 6px;
-  width: 100px;
-  color: #FFFFFF;
-  border: none;
-  height: 80%;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-45%);
-  text-transform: uppercase;
-}
-
-input{
-  height: 100%;
-  width: 100%;
-  outline: none;
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.7);
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(10px);
-}
-
-input::placeholder{
-  color: rgba(255, 255, 255, 0.774);
-  font-family: Lato, sans-serif;
-  font-weight: 300;
-  padding: 16px;
-}
-
-#emailInput{
-  height: 4rem;
-  position: relative;
-  width: 90%;
 }
 
 #content{
@@ -152,22 +127,21 @@ input::placeholder{
   padding: 45px;
 }
 
-@media only screen and (max-width: 1500px) {
-  #content{
-    flex-wrap: wrap;
-  }
-
-  #card{
-    width: 300px;
-    height: 180px;
-  }
-}
 
 #texts-and-input{
-  max-width: 40%;
+  flex: 1;
+  min-width: 60%;
 }
 
+#texts{
+  width: 80%;
+}
 
+#emailInput{
+  height: 4rem;
+  position: relative;
+  width: 80%;
+}
 
 #chip{
   width: 50px;
@@ -179,4 +153,78 @@ input::placeholder{
   width: 100%;
   display: flex;
   justify-content: space-between;
+}
+
+
+@media only screen and (max-width: 1500px) {
+
+  p{
+    max-width: 100%;
+  }
+
+  h1{
+    max-width: 80%;
+  }
+
+  #content{
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  #card{
+    margin-top: 40px;
+    padding: 15px;
+  }
+
+  #chip{
+    width: 25px;
+    padding: 10px 0 10px 0;
+  }
+
+  #texts{
+    width: 100%;
+  }
+
+
+  #emailInput{
+    width: 80%;
+  }
+  
+}
+
+
+@media only screen and (max-width: 800px) {
+
+  h1{
+    font-size: 1.8rem;
+  }
+
+  p{
+    font-size: 0.8rem;
+  }
+
+  button{
+    width: 75px;
+    height: 80%;
+  }
+
+  #bottom-decoration {
+    height: 15%;
+  }
+
+  #top-decoration {
+    height: 20%;
+    top: -8%;
+  }
+
+  #card{
+    width: 100vw;
+    height: 30vw;
+  }
+
+  #emailInput{
+    width: 100%;
+  }
+
 }
